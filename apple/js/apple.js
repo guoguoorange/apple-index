@@ -11,9 +11,10 @@ $(function(){
 
         $(".son").slideToggle(200);
     })
-    $(".link>span").click(function(){
 
-        $(".son").slideToggle(200);
+    $(".mb").click(function(){
+        var index=$(this).index();
+        $(".m").eq(index).slideToggle(200);
     })
 })
 /*轮播*/
@@ -29,7 +30,7 @@ $(function(){
             next=0;
             flag=false;
         }
-        $(".imgbox").eq(now).animate({width:"90%",height:"90%"}).css("zIndex",0);
+        $(".imgbox").eq(now).css({width:"90%",height:"90%"}).css("zIndex",0);
         $(".imgbox").eq(next).animate({left:0},function(){
             $(".imgbox").eq(now).css({width:"100%",height:"100%",left:"100%"}).css("zIndex",1);
             now=next;
