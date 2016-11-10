@@ -26,13 +26,12 @@ a{
     width: 100%;
     height: 48px;
     max-height: 44px;
-    background: #333;
-    background: rgba(0,0,0,0.8);
     font-size: 18px;
+    background:#333;
 }
 .nav-innerbox{
     margin: 0 auto;
-    width: 95%;
+    width: 98%;
 }
 .nav-innerbox li{
     display: inline-block;
@@ -52,21 +51,49 @@ a{
     margin: 0 auto;
 }
 .nav-innerbox .nav-xl{
-    width: 25%;
+    /*width: 25%;*/
+    width: 30%;
+    text-align: left;
 
 }
-.nav-innerbox .nav-xl a{
+.nav-innerbox .nav-xl .link-xl{
     color:#fff;
     display: block;
     font-size: 30px;
     line-height: 25px;
     font-weight: 900;
+    position:relative;
+}
+.link-xl .son{
+    width: 100%;
+    position: absolute;
+    top:44px;
+    left:-10px;
+    padding:0 30px;
+    background: #000;
+    z-index: 3;
+
+}
+.son li{
+    width: 100%;
+    background: #000;
+    border-bottom: 1px solid #666;
+
+}
+.link-xl .son li a{
+    display: block;
+    color: #ccc;
+    padding:10px ;
 }
 .nav-innerbox .nav-apple{
-    width: 48%;
+    width: 20%;
+    text-align: center;
 }
 .nav-innerbox .nav-bag{
-    width: 4%;
+    /*width: 4%;*/
+    width: 25%;
+    text-align: right;
+
 }
 .nav-innerbox li .link-apple{
     display: inline-block;
@@ -93,6 +120,7 @@ a{
     height:550px;
     min-width: 357px;
     position: relative;
+    overflow: hidden;
 }
 .bannerimg{
     width: 100%;
@@ -102,6 +130,7 @@ a{
 }
 .imgbox{
     width: 100%;
+    height:100%;
     position: absolute;
     top:0;
     left:0;
@@ -113,10 +142,15 @@ a{
 }
 .bannerimg1{
     width:auto;
-    height:437px;
+    height:100%;
     background:url(img/macbookpro_small_2x.jpg) no-repeat;
     background-size:100% 100% ;
     background-position:top center;
+}
+.imgbox2{
+    position: absolute;
+    top:0;
+    left:100%;
 }
 .imgbox2 h1,.imgbox2 h2{
     color:#fff;
@@ -138,7 +172,74 @@ a{
     background-size:100% 100% ;
     background-position:center;
 }
+.leftbtn,.rightbtn{
+    width:60px;height:60px;
+    background: #ddd;
+    border-radius: 50% ;
+    position: absolute;
+    top:0;bottom:0;
+    margin:auto;
+    color: #999;
+    z-index: 2;
+    text-align: center;
+    line-height: 60px;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity .5s linear;
+}
+.leftbtn{
+    left:20px;
+}
+.rightbtn{
+    right:20px;
+}
+.left,.right{
+    width: 20%;
+    height:100%;
+    position: absolute;
 
+}
+.left{
+    top:0;
+    left:0;
+}
+.right{
+    top:0;
+    right:0;
+}
+
+.left:hover>.leftbtn{
+    opacity: 1;
+}
+.right:hover>.rightbtn{
+    opacity: 1;
+}
+.btnbox{
+    width: 170px;
+    height:3px;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:50px;
+    margin:auto;
+}
+.btn{
+    width:50px;
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+    background: #ccc;
+    z-index: 2;
+    position: relative;
+}
+.btn:last-child{
+    margin:0;
+}
+.progress{
+    background: #666;
+    height:100%;
+    width: 0;
+}
 .xys-pic{
     min-width: 357px;
 }
@@ -251,17 +352,17 @@ a{
 
     .bannerimg1{
         background:url(img/macbookpro_medium_2x.jpg) no-repeat;
-        background-size:100% 100% ;
+        background-size:cover ;
         background-position:top center;
     }
     .bannerimg2{
         background:url(img/iphone_large.jpg) no-repeat;
-        background-size:100% 100% ;
+        background-size:cover ;
         background-position:top center;
     }
     .bannerimg3{
         background:url(img/event_medium.jpg) no-repeat;
-        background-size:100% 100% ;
+        background-size:cover ;
         background-position:center;
     }
 
@@ -303,7 +404,7 @@ a{
         width: 0;
     }
     .nav-innerbox .nav-xl a{
-        color:rgba(0,0,0,0.8);
+        color:#333;
     }
     .nav-innerbox .nav-apple{
         width: 5%;
@@ -317,6 +418,9 @@ a{
         display: inline-block;
         height: 44px;text-decoration: none;
         color:#fff;
+    }
+    .link-xl{
+        display: none;
     }
     .link-apple{
         background-repeat: no-repeat;
@@ -384,12 +488,12 @@ a{
 @media screen and (min-width:1055px){
     .bannerimg1{
         background:url(img/macbookpro_large_2x.jpg) no-repeat;
-        background-size:100% 100% ;
+        background-size:cover ;
         background-position:top center;
     }
     .bannerimg3{
         background:url(img/event_large.jpg) no-repeat;
-        background-size:100% 100% ;
+        background-size:cover ;
         background-position:50% 22%;
     }
 
